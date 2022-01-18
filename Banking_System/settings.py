@@ -81,7 +81,8 @@ DATABASES = {
         'NAME': 'BankingApp',
         'USER': 'postgres',
         'PASSWORD': '3766',
-        
+        'HOST': 'localhost',
+        'PORT': '5432' ,
     }
 }
 
