@@ -75,14 +75,25 @@ WSGI_APPLICATION = 'Banking_System.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'BankingApp',
+#         'USER': 'postgres',
+#         'PASSWORD': '3766',
+#         #'HOST': 'localhost',
+        
+#     }
+# }
+
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BankingApp',
-        'USER': 'postgres',
-        'PASSWORD': '3766',
-        #'HOST': 'localhost',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
         
+        #'HOST': 'localhost',
     }
 }
 
