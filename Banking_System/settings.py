@@ -79,9 +79,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'BankingApp',
-        # 'USER': 'postgres',
-        # 'PASSWORD': '3766',
-        # 'HOST': 'localhost',
+        'USER': 'postgres',
+        'PASSWORD': '3766',
+        #'HOST': 'localhost',
         
     }
 }
