@@ -142,7 +142,9 @@ if via account number, directly change info
                     <span>Account number: </span>
                     <select id="receiver_Account_no" name="receiver_Account_no" placeholder="Sender Account number">
                         {% for c in all_customers%}   
+                        {% if c.accountNo != selectedSender.accountNo %}
                         <option value="{{c.accountNo}}" id="selectedreceiver">{{c.accountNo}}-{{c.customerName}}</option>
+                        {% endif %}
                         {% endfor %} 
                     </select>
                     <br>
