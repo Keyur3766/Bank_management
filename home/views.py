@@ -42,7 +42,11 @@ def sender_Profile(request):
         selectedSender = Customer.objects.get(accountNo=sender)
         selectedreceiver = Customer.objects.get(accountNo=receiver_Account_no)
 
-        if amount>selectedSender.balance:
+
+        if amount<=0:
+            messages.error(request, 'Please enter valid amount')
+
+        elif amount>selectedSender.balance:
             messages.error(request, 'Insufficient balance in the account')
 
         else:
@@ -65,7 +69,11 @@ def sender_Profile(request):
         selectedSender = Customer.objects.get(accountNo=sender)
         selectedreceiver = Customer.objects.get(accountNo=receiver_Account_no)
 
-        if amount>selectedSender.balance:
+
+        if amount<=0:
+            messages.error(request, 'Please enter valid amount')
+
+        elif amount>selectedSender.balance:
             messages.error(request, 'Insufficient balance in the account')
 
         else:
